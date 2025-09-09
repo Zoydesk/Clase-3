@@ -17,11 +17,11 @@ class ProductController extends Controller
 
 
         if ($category != null) {
-            return view("producrs.detail", [
+            return view("products.detail", [
                 'myId' => $id, 
                 'myCategory' => $category]);
         } else {
-            return view("producrs.detail", [
+            return view("products.detail", [
                 'myId' => $id, 
                 'myCategory' => ""]);
         }
@@ -29,6 +29,6 @@ class ProductController extends Controller
 
     function create()
     {
-        return "FORM FOR CREATE PRODUCTS";
+        return view('products.create');
     }
 }
