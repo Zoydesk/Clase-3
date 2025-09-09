@@ -6,18 +6,29 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
-    function index(){
-        return "list products";
+    function index()
+    {
+        return view('products.index');
     }
 
-     function detail($id, $category) {
-    if ($category != null){
-    return "Detail products: " . $id . " With Category: " . $category;
-    } else {
-        return "Detail products: " . $id;
-    }}
+    function detail($id, $category)
+    {
 
-    function create(){
+
+
+        if ($category != null) {
+            return view("producrs.detail", [
+                'myId' => $id, 
+                'myCategory' => $category]);
+        } else {
+            return view("producrs.detail", [
+                'myId' => $id, 
+                'myCategory' => ""]);
+        }
+    }
+
+    function create()
+    {
         return "FORM FOR CREATE PRODUCTS";
     }
 }
