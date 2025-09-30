@@ -19,6 +19,8 @@ class CategorySeeder extends Seeder
        $categoryPhones->name = 'Computers';
        $categoryPhones->save();
 
+       Category::factory(200)->create();
+
 
     }
 
