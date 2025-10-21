@@ -1,4 +1,4 @@
-@extends('layout.app')
+@extends('layouts.app')
 
 @section('title', 'Crear Producto')
 
@@ -37,3 +37,4 @@
         </form>
     </div>
 @endsection
+

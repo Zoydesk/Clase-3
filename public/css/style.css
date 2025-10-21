@@ -1,9 +1,117 @@
-        .form-container {
-            width: 100%;
-            max-width: 800px;
-            margin: 50px auto;
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
+/* ======= UNIVERSIDAD UNAB STYLE ======= */
+
+/* Colores base */
+:root {
+    --unab-orange: #f7941d;
+    --unab-dark-orange: #d9780e;
+    --unab-gray: #f7f7f7;
+    --unab-dark: #333;
+}
+
+/* Fondo y tipografía */
+body {
+    background-color: var(--unab-gray);
+    font-family: 'Nunito', sans-serif;
+    color: var(--unab-dark);
+    margin: 0;
+    padding: 0;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    border-bottom: 4px solid var(--unab-orange);
+}
+
+.navbar-brand {
+    font-weight: 800;
+    color: var(--unab-orange) !important;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar-brand img {
+    height: 45px;
+    width: auto;
+}
+
+.nav-link {
+    color: var(--unab-dark) !important;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.nav-link:hover {
+    color: var(--unab-orange) !important;
+}
+
+/* ===== Contenedor principal ===== */
+main {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.05);
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+
+/* ===== Botones ===== */
+.btn-primary {
+    background-color: var(--unab-orange);
+    border: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: var(--unab-dark-orange);
+    transform: scale(1.03);
+}
+
+/* ===== Footer ===== */
+footer {
+    background-color: var(--unab-orange);
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 3rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+/* ===== Títulos ===== */
+h1, h2, h3, h4 {
+    color: var(--unab-dark);
+    font-weight: 700;
+}
+
+h1 span {
+    color: var(--unab-orange);
+}
+
+/* ===== Inputs ===== */
+input, select, textarea {
+    border-radius: 8px !important;
+    border: 1px solid #ccc !important;
+    transition: 0.2s;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: var(--unab-orange) !important;
+    box-shadow: 0 0 5px rgba(247, 148, 29, 0.5) !important;
+}
+
+/* ===== Logo espacio ===== */
+.logo-space {
+    width: 60px;
+    height: 60px;
+    background-color: var(--unab-gray);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
