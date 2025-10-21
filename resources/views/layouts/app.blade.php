@@ -7,19 +7,7 @@
 
     {{-- TailwindCSS CDN --}}
     <script src="https://cdn.tailwindcss.com"></script>
-
-    {{-- Estilos personalizados --}}
-    <style>
-        .form-container {
-            width: 100%;
-            max-width: 800px;
-            margin: 50px auto;
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
-    </style>
+    <link rel="stylesheet" href="{{ asset('css/style.css')}}">
 </head>
 <body class="bg-gray-100">
 
@@ -27,9 +15,8 @@
     @include('layouts.navbar')
 
     {{-- Contenido dinámico --}}
-    <main class="min-h-screen py-10">
-        @yield('content')
-    </main>
+ 
+    @yield('content')
 
     {{-- Footer --}}
     @include('layouts.footer')
