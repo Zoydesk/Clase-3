@@ -19,7 +19,7 @@
     <div class="product-details">
         <!-- Nombre del producto -->
         <h1>Aquí aparecerá el nombre del producto</h1>
-        
+
         <!-- Precio del producto -->
         <div class="product-price">
             <span class="original-price">Aquí aparecerá el precio original</span>
@@ -31,7 +31,7 @@
             <p><strong>Aquí aparecerá la marca del producto</strong></p>
             <p><strong>Aquí aparecerá la descripción del producto</strong></p>
         </div>
-        
+
         <!-- Botones de acción -->
         <button class="add-to-cart">Agregar al carrito</button>
         <button class="buy-now">Comprar ahora</button>
