@@ -15,11 +15,12 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
 
-              CategorySeeder::class
+              CategorySeeder::class,
+              BrandSeeder::class
 
         ]);
 
-        Product::factory(1)->create();
+        Product::factory(1000)->create();
 
     }
 }
