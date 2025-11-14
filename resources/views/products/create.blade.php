@@ -8,6 +8,8 @@
     <div class = "card">
         <div class = "card-body">
 
+            
+
             <form action="{{ route('admin.products.store') }}" method="POST">
                 @csrf
 
@@ -38,7 +40,7 @@
 
                     <div class="input-group input-group-outline mb-3">
                         <label for="productPrice" class="form-label">Price</label>
-                        <input type="number" class="form-control" id="productPrice" name="price" step="0.01" value="{{old('price')}}">
+                        <input type="text" class="form-control" id="productPrice" name="price" step="0.01" value="{{old('price')}}">
                     </div>
 
 
