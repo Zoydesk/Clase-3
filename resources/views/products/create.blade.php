@@ -3,39 +3,65 @@
 @section('title', 'Crear Producto')
 
 @section('content')
-<div class="form-container">
-    <h1>Formulario de Producto</h1>
-    <form action="#" method="POST" enctype="multipart/form-data">
-        @csrf
+    <h2>Crear nuevo producto</h2>
 
-        <div class="form-group">
-            <label for="product-name">Nombre del Producto</label>
-            <input type="text" id="product-name" name="product-name" placeholder="Ingresa el nombre del producto" required>
+    <div class = "card">
+        <div class = "card-body">
+
+            <form>
+                @csrf
+
+                <!-- Nombre del Producto -->
+                <div class="input-group input-group-outline mb-3">
+                    <label for="productName" class="form-label">Product Name</label>
+                    <input type="text" class="form-control" id="productName" name="name">
+                </div>
+
+                <!-- Descripción del Producto -->
+                <div class="input-group input-group-outline mb-3">
+                    <label for="productDescription" class="form-label">Descripción</label>
+                    <textarea class="form-control" id="productDescription" rows="3" name="description"></textarea>
+                </div>
+
+                <div class="input-group input-group-outline mb-3">
+                    <label for="productPrice" class="form-label">Price</label>
+                    <input type="number" class="form-control" id="productPrice" name="price" step="0.01"
+                        name = "price">
+                </div>
+
+                <!-- Categoría del Producto -->
+                <div class="input-group input-group-outline mb-3">
+
+
+
+                    <select class="form-control" id="productCategory">
+                        <option value="" selected disabled>-- Category --</option>
+                        @foreach ($categories as $category)
+                            <option value="{{ $category->id }}">{{ $category->name }}</option>
+                        @endforeach
+                    </select>
+                </div>
+
+                <!-- Marca del Producto -->
+                <div class="input-group input-group-outline mb-3">
+                    <select class="form-control" id="productBrand">
+                        <option value="" selected disabled>-- Brand --</option>
+                        @foreach ($brands as $brand)
+                            <option value="{{ $brand->id }}">{{ $brand->name }}</option>
+                        @endforeach
+                    </select>
+                </div>
+
+                <!-- Botón de Envío -->
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-primary">Add Producto</button>
+                </div>
+
+
+            </form>
+
         </div>
+    </div>
 
-        <div class="form-group">
-            <label for="product-price">Precio</label>
-            <input type="number" step="0.01" id="product-price" name="product-price" placeholder="Ej: 199.99" required>
-        </div>
-
-        <div class="form-group">
-            <label for="product-image">Imagen</label>
-            <input type="file" id="product-image" name="product-image" accept="image/*">
-        </div>
-
-        <div class="form-group">
-            <label for="product-brand">Marca</label>
-            <input type="text" id="product-brand" name="product-brand" placeholder="Ej: Sony, Samsung..." required>
-        </div>
-
-        <div class="form-group">
-            <label for="product-description">Descripción</label>
-            <textarea id="product-description" name="product-description" rows="4" placeholder="Escribe una descripción del producto" required></textarea>
-        </div>
-
-        <button type="submit" class="btn-submit">Guardar Producto</button>
-    </form>
-</div>
 
 @endsection
-

@@ -19,23 +19,17 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [PRoductController::class, 'index']);
 
-
-Route::prefix('products')->controller(ProductController::class)->group(function () {
-
-    Route::get('/', 'index');
-
-    Route::get('/create',  'create');
-
-    Route::get('/{id}/{category}', 'detail');
-});
+Route::get('products/{id}/{category}', [ProductController::class,'detail']);
 
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
-Route::get('/', [HomeController::class, 'welcome']);
+
 
 Route::prefix('admin')->group(function(){
    Route::get('/', [AdminController::class, 'index'])->name('admin.index');
    Route::get('/categories', [CategoryController::class, 'create'])->name('admin.categories.create');
    Route::post('/categories/store', [CategoryController::class, 'store'])->name('admin.categories.store');
+
+   Route::get('products/create', [ProductController::class, 'create']);
 });
