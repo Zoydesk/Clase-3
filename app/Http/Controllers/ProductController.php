@@ -67,5 +67,13 @@ class ProductController extends Controller
 
     }
 
+    public function table()
+    {
+        $products = Product::all();
+        return view('products.table', [
+            'products' => $products
+        ]);
+    }
+
 
 }

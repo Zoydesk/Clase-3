@@ -3,7 +3,7 @@
 @section('title', 'Crear Producto')
 
 @section('content')
-    <h2>Crear nuevo producto</h2>
+    <h2>New Product</h2>
 
     <div class = "card">
         <div class = "card-body">
